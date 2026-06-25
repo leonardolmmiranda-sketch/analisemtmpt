@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Análise MTM-UAS | Mercado Libre</title>
+<title>Em Construção | Mercado Livre</title>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,17 +21,8 @@
   --gray:#717171;
   --border:#EBEBEB;
   --white:#FFFFFF;
-  --green:#2E7D5E;
-  --green-dark:#1F5C44;
-  --green-light:#E8F5EE;
-  --teal:#0B7E8A;
-  --teal-light:#E0F5F7;
-  --purple:#5B3AA8;
-  --purple-light:#EEE8FA;
-  --orange:#D97706;
-  --orange-light:#FEF3C7;
 }
-body { font-family: 'Inter', sans-serif; background: #EDEAE3; color: var(--text); min-height: 100vh; }
+body { font-family: 'Inter', sans-serif; background: #EDEAE3; color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
 header { background: var(--yellow); height: 60px; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--yellow-dark); }
 .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .logo-mark { width: 36px; height: 36px; background: var(--blue); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
@@ -42,192 +33,70 @@ header { background: var(--yellow); height: 60px; padding: 0 2rem; display: flex
 .header-right { display: flex; align-items: center; gap: 10px; }
 .lang-link { font-size: 12px; font-weight: 600; color: var(--blue-deeper); text-decoration: none; background: rgba(255,255,255,0.7); padding: 5px 14px; border-radius: 20px; border: 1px solid var(--yellow-dark); transition: background .15s; }
 .lang-link:hover { background: white; }
-.hero { background: var(--yellow); padding: 3rem 2rem 2.5rem; text-align: center; border-bottom: 3px solid var(--yellow-dark); }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; background: rgba(44,62,107,0.08); padding: 5px 16px; border-radius: 20px; }
-.hero h1 { font-family: 'Raleway', sans-serif; font-size: clamp(28px, 5vw, 48px); font-weight: 900; color: var(--blue-deeper); letter-spacing: -1px; line-height: 1.1; margin-bottom: 10px; }
-.hero h1 span { background: var(--dark); color: var(--yellow-mid); padding: 2px 10px; border-radius: 6px; display: inline-block; }
-.hero-sub { font-size: 15px; color: var(--blue-dark); opacity: 0.8; max-width: 520px; margin: 0 auto; line-height: 1.6; }
-.ai-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--dark); color: var(--yellow-mid); font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-top: 14px; letter-spacing: .5px; }
-.breadcrumb-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; display: flex; align-items: center; gap: 8px; font-size: 13px; flex-wrap: wrap; min-height: 44px; }
-.bc-link { color: var(--blue); text-decoration: none; font-weight: 500; transition: color .15s; }
-.bc-link:hover { color: var(--blue-deeper); text-decoration: underline; }
-.bc-sep { color: var(--gray); font-size: 11px; }
-.bc-current { color: var(--gray); font-weight: 600; }
-.container { max-width: 920px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
-.section-label { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); display: flex; align-items: center; gap: 10px; margin-bottom: 1.5rem; }
-.section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-.cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-.tool-card { background: var(--white); border-radius: 16px; border: 1px solid var(--border); overflow: hidden; text-decoration: none; display: flex; flex-direction: column; transition: transform .2s, box-shadow .2s; animation: fadeUp .4s ease both; }
-.tool-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(44,62,107,0.12); border-color: var(--blue-mid); }
-.tool-card:nth-child(1) { animation-delay: .04s; }
-.tool-card:nth-child(2) { animation-delay: .13s; }
-.card-top { padding: 2rem 1.5rem 1.5rem; position: relative; overflow: hidden; }
-.card-top.dark { background: var(--dark); }
-.card-top.teal { background: var(--teal); }
-.card-top::after { content: ''; position: absolute; bottom: -20px; right: -20px; width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,0.06); }
-.card-top::before { content: ''; position: absolute; top: -30px; left: 60%; width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.04); }
-.ai-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(255,255,255,0.15); border-radius: 20px; padding: 3px 10px; font-size: 10px; font-weight: 700; color: white; letter-spacing: .5px; margin-bottom: 10px; }
-.card-emoji { font-size: 38px; display: block; margin-bottom: 12px; line-height: 1; }
-.card-title { font-family: 'Raleway', sans-serif; font-size: 21px; font-weight: 800; color: var(--yellow-mid); letter-spacing: -0.3px; line-height: 1.2; margin-bottom: 6px; }
-.card-top.teal .card-title { color: white; }
-.card-subtitle { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.4; }
-.card-bottom { padding: 1.25rem 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 12px; }
-.card-desc { font-size: 13px; color: var(--gray); line-height: 1.6; flex: 1; }
-.how-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-.how-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 12.5px; color: var(--text); line-height: 1.5; }
-.how-num { width: 22px; height: 22px; border-radius: 50%; background: var(--dark); color: var(--yellow-mid); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-.how-num.teal { background: var(--teal); color: white; }
-.card-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; background: var(--blue-light); color: var(--blue-dark); }
-.tag.dark { background: #e8e8f0; color: var(--dark); }
-.tag.teal { background: var(--teal-light); color: #065863; }
-.card-cta { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); }
-.cta-text { font-size: 13px; font-weight: 600; color: var(--dark); }
-.cta-text.teal { color: var(--teal); }
-.cta-arrow { width: 28px; height: 28px; background: var(--dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; transition: transform .15s; }
-.cta-arrow.teal { background: var(--teal); }
-.tool-card:hover .cta-arrow { transform: translateX(3px); }
-.alert-bar { display: flex; align-items: flex-start; gap: 12px; border-radius: 12px; padding: 14px 16px; margin-bottom: 2rem; }
-.alert-bar.info { background: var(--blue-light); border: 1px solid rgba(44,62,107,0.15); }
-.alert-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-.alert-text { font-size: 13px; color: var(--text); line-height: 1.6; }
-.alert-text strong { color: var(--blue-deeper); }
-.how-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 12px; margin-bottom: 2.5rem; }
-.how-strip-item { background: var(--white); border-radius: 12px; border: 1px solid var(--border); padding: 1rem; text-align: center; }
-.strip-num { width: 32px; height: 32px; border-radius: 50%; background: var(--dark); color: var(--yellow-mid); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; }
-.strip-title { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; color: var(--blue-deeper); margin-bottom: 4px; }
-.strip-sub { font-size: 11.5px; color: var(--gray); line-height: 1.4; }
+
+/* Main content */
+.main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 3rem 1.5rem; }
+.wip-card { background: var(--white); border-radius: 24px; border: 1px solid var(--border); max-width: 540px; width: 100%; padding: 3rem 2.5rem; text-align: center; box-shadow: 0 8px 40px rgba(44,62,107,0.08); animation: fadeUp .5s ease both; }
+.wip-icon { font-size: 64px; line-height: 1; margin-bottom: 1.5rem; display: block; }
+.wip-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--blue-light); color: var(--blue-dark); font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; margin-bottom: 1rem; letter-spacing: 1px; text-transform: uppercase; }
+.wip-title { font-family: 'Raleway', sans-serif; font-size: clamp(26px, 5vw, 38px); font-weight: 900; color: var(--blue-deeper); letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 0.75rem; }
+.wip-title span { background: var(--dark); color: var(--yellow-mid); padding: 2px 10px; border-radius: 6px; display: inline-block; }
+.wip-desc { font-size: 14.5px; color: var(--gray); line-height: 1.65; max-width: 380px; margin: 0 auto 2rem; }
+.wip-divider { height: 1px; background: var(--border); margin: 1.75rem 0; }
+.wip-hint { font-size: 12.5px; color: var(--gray); line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; background: #f8f8f2; border-radius: 10px; padding: 12px 14px; text-align: left; }
+.wip-hint-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.back-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 1.75rem; background: var(--dark); color: var(--yellow-mid); font-family: 'Raleway', sans-serif; font-size: 14px; font-weight: 700; padding: 11px 24px; border-radius: 24px; text-decoration: none; transition: opacity .15s, transform .15s; }
+.back-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+/* Dots animation */
+.dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 2rem; }
+.dot { width: 10px; height: 10px; border-radius: 50%; background: var(--yellow-mid); border: 2px solid var(--yellow-dark); animation: pulse 1.4s ease-in-out infinite; }
+.dot:nth-child(2) { animation-delay: .2s; background: var(--blue-mid); border-color: var(--blue); }
+.dot:nth-child(3) { animation-delay: .4s; }
+
 footer { background: var(--yellow); border-top: 2px solid var(--yellow-dark); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .footer-brand { font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700; color: var(--blue-deeper); }
 .footer-note { font-size: 12px; color: var(--blue-dark); opacity: 0.7; }
-@keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
-@media (max-width: 600px) { .cards-grid { grid-template-columns: 1fr; } .how-strip { grid-template-columns: 1fr 1fr; } }
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.6; } }
 </style>
 </head>
 <body>
 
 <header>
-  <a class="logo" href="https://mtmtransportes-paginainicialpt.vercel.app/">
+  <a class="logo" href="https://mtmtransportes-paginainiciales.vercel.app/">
     <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3.5" fill="#F5E97A"/><path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5" stroke="#F5E97A" stroke-width="2.2" stroke-linecap="round"/></svg></div>
-    <div><div class="logo-name">Mercado Libre</div><div class="logo-sub">Ferramentas Internas</div></div>
+    <div><div class="logo-name">Mercado Livre</div><div class="logo-sub">Ferramentas Internas</div></div>
   </a>
   <div class="header-right">
-    <a class="lang-link" href="https://mtmtransportes-paginainicialpt.vercel.app/">&#8249; In&#237;cio</a>
+    <a class="lang-link" href="https://mtmtransportes-analisemtmpt.vercel.app/">&#8249; Voltar</a>
     <a class="lang-link" href="https://mtmtransportes-analisemtmes.vercel.app/">&#127466;&#127480; Espa&#241;ol</a>
     <span class="badge-header">MTM-UAS</span>
   </div>
 </header>
 
-<div class="hero">
-  <div class="hero-eyebrow">&#128202; An&#225;lise MTM-UAS</div>
-  <h1>An&#225;lise <span>MTM-UAS</span><br>com Claude Cowork</h1>
-  <p class="hero-sub">Gere tabelas MTM-UAS completas com c&#243;digos, TMU, tempo de ciclo e UPH — a partir de texto ou v&#237;deo — diretamente no Claude Cowork.</p>
-  <div class="ai-pill">&#10024; IA Nativa &mdash; Sem APIs externas &middot; Rede corporativa MELI</div>
-</div>
-
-<div class="breadcrumb-bar">
-  <a class="bc-link" href="https://mtmtransportes-paginainicialpt.vercel.app/">&#8249; In&#237;cio</a>
-  <span class="bc-sep">&#8250;</span>
-  <span class="bc-current">An&#225;lise MTM-UAS</span>
-</div>
-
-<div class="container">
-
-  <div class="alert-bar info">
-    <span class="alert-icon">&#128274;</span>
-    <div class="alert-text">
-      <strong>Funciona dentro da rede MELI.</strong> A an&#225;lise roda sobre o Claude Cowork usando uma skill instal&#225;vel (.skill). N&#227;o requer APIs externas nem VPN especial — basta instalar a skill uma vez e usar em qualquer conversa&#231;&#227;o.
+<main class="main">
+  <div class="wip-card">
+    <span class="wip-icon">&#128679;</span>
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
     </div>
+    <div class="wip-badge">&#9881;&#65039; Em breve</div>
+    <h1 class="wip-title">Página <span>em construção</span></h1>
+    <p class="wip-desc">Este conteúdo ainda está sendo preparado. Em breve estará disponível com todas as instruções e recursos para uso no Claude Cowork.</p>
+    <div class="wip-hint">
+      <span class="wip-hint-icon">&#128161;</span>
+      <span>Enquanto isso, você pode usar a página anterior para acessar as ferramentas MTM-UAS já disponíveis.</span>
+    </div>
+    <a class="back-btn" href="https://mtmtransportes-analisemtmpt.vercel.app/">&#8249; Voltar</a>
   </div>
-
-  <!-- como funciona -->
-  <div class="section-label">&#128161; Como funciona</div>
-  <div class="how-strip">
-    <div class="how-strip-item">
-      <div class="strip-num">1</div>
-      <div class="strip-title">Instale a skill</div>
-      <div class="strip-sub">Baixe o arquivo .skill e instale no Cowork uma &#250;nica vez</div>
-    </div>
-    <div class="how-strip-item">
-      <div class="strip-num">2</div>
-      <div class="strip-title">Escolha o modo</div>
-      <div class="strip-sub">Descreva a opera&#231;&#227;o em texto ou envie um v&#237;deo/foto</div>
-    </div>
-    <div class="how-strip-item">
-      <div class="strip-num">3</div>
-      <div class="strip-title">Receba a tabela</div>
-      <div class="strip-sub">A IA gera a tabela MTM-UAS com c&#243;digos, TMU e ciclo</div>
-    </div>
-    <div class="how-strip-item">
-      <div class="strip-num">4</div>
-      <div class="strip-title">Excel autom&#225;tico</div>
-      <div class="strip-sub">Arquivo .xlsx formatado gerado ao final de cada an&#225;lise</div>
-    </div>
-  </div>
-
-  <!-- seleção de modo -->
-  <div class="section-label">&#9878;&#65039; Escolha o modo de an&#225;lise</div>
-  <div class="cards-grid">
-
-    <!-- Card 1: Texto -->
-    <a class="tool-card" href="https://mtmtransportes-analisemtmtxtpt.vercel.app/">
-      <div class="card-top dark">
-        <div class="ai-badge">&#10024; Claude Cowork &mdash; Descri&#231;&#227;o</div>
-        <span class="card-emoji">&#128221;</span>
-        <div class="card-title">An&#225;lise por Texto</div>
-        <div class="card-subtitle">Descreva a opera&#231;&#227;o &middot; A IA codifica e calcula</div>
-      </div>
-      <div class="card-bottom">
-        <p class="card-desc">Descreva os movimentos do operador em linguagem natural. A IA identifica cada processo UAS, atribui os c&#243;digos corretos e calcula os TMU automaticamente.</p>
-        <ul class="how-list">
-          <li><span class="how-num">1</span><span>Escreva a descri&#231;&#227;o do processo no chat</span></li>
-          <li><span class="how-num">2</span><span>A IA interpreta e atribui c&#243;digos MTM-UAS</span></li>
-          <li><span class="how-num">3</span><span>Receba tabela completa + Excel autom&#225;tico</span></li>
-        </ul>
-        <div class="card-tags">
-          <span class="tag dark">Texto</span>
-          <span class="tag dark">Sem imagem</span>
-          <span class="tag dark">100% preciso</span>
-        </div>
-        <div class="card-cta">
-          <span class="cta-text">Ver como usar</span>
-          <div class="cta-arrow">&#8594;</div>
-        </div>
-      </div>
-    </a>
-
-    <!-- Card 2: Vídeo -->
-    <a class="tool-card" href="https://mtmtransportes-analisemtmvideopt.vercel.app/">
-      <div class="card-top teal">
-        <div class="ai-badge">&#10024; Claude Cowork &mdash; IA Vision</div>
-        <span class="card-emoji">&#127916;</span>
-        <div class="card-title">An&#225;lise por V&#237;deo</div>
-        <div class="card-subtitle">Envie v&#237;deo ou foto &middot; A IA v&#234; e analisa</div>
-      </div>
-      <div class="card-bottom">
-        <p class="card-desc">Anexe um v&#237;deo ou foto da opera&#231;&#227;o diretamente no chat. A IA identifica movimentos visualmente, estima dist&#226;ncias e gera a tabela MTM-UAS com indica&#231;&#227;o de fonte.</p>
-        <ul class="how-list">
-          <li><span class="how-num teal">1</span><span>Anexe o v&#237;deo ou imagem na conversa</span></li>
-          <li><span class="how-num teal">2</span><span>A IA analisa os movimentos por vis&#227;o</span></li>
-          <li><span class="how-num teal">3</span><span>Tabela com "Observado" vs "Estimado" + Excel</span></li>
-        </ul>
-        <div class="card-tags">
-          <span class="tag teal">V&#237;deo / Foto</span>
-          <span class="tag teal">IA Vision</span>
-          <span class="tag teal">MP4, MOV, JPG</span>
-        </div>
-        <div class="card-cta">
-          <span class="cta-text teal">Ver como usar</span>
-          <div class="cta-arrow teal">&#8594;</div>
-        </div>
-      </div>
-    </a>
-
-  </div>
-</div>
+</main>
 
 <footer>
-  <div class="footer-brand">Mercado Libre &mdash; MTM</div>
+  <div class="footer-brand">Mercado Livre &mdash; MTM</div>
   <div class="footer-note">An&#225;lise MTM-UAS &middot; Powered by Claude Cowork</div>
 </footer>
 
