@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Em Construção | MTM — Mercado Libre</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow: #FFF8DC;
+  --yellow-mid: #F5E97A;
+  --yellow-dark: #E8D98A;
+  --blue: #2C3E6B;
+  --blue-dark: #1E2D52;
+  --blue-deeper: #15203D;
+  --blue-light: #EEF2FF;
+  --blue-mid: #3D5490;
+  --text: #333333;
+  --gray: #717171;
+  --border: #EBEBEB;
+  --white: #FFFFFF;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #EDEAE3;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── HEADER ── */
+header {
+  background: var(--yellow);
+  height: 60px; padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  position: sticky; top: 0; z-index: 100;
+  border-bottom: 2px solid var(--yellow-dark);
+}
+.logo {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.logo-mark {
+  width: 36px; height: 36px; background: var(--blue); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-mark svg { width: 20px; height: 20px; }
+.logo-name {
+  font-family: 'Raleway', sans-serif; font-weight: 800;
+  font-size: 17px; color: var(--blue-deeper);
+}
+.logo-sub {
+  font-size: 10px; font-weight: 600; color: var(--blue-dark);
+  letter-spacing: 1px; text-transform: uppercase; margin-top: 1px;
+}
+.header-right { display: flex; align-items: center; gap: 8px; }
+
+/* pill — mesma classe dos outros sites MTM */
+.lang-link {
+  font-size: 12px; font-weight: 600; color: var(--blue-deeper);
+  text-decoration: none; background: rgba(255,255,255,0.7);
+  padding: 5px 14px; border-radius: 20px;
+  border: 1px solid var(--yellow-dark);
+  transition: background .15s;
+  display: inline-flex; align-items: center; gap: 5px;
+  cursor: pointer; font-family: 'Inter', sans-serif;
+  white-space: nowrap;
+}
+.lang-link:hover { background: white; }
+
+.badge-header {
+  background: var(--blue); color: var(--yellow-mid);
+  font-family: 'Raleway', sans-serif; font-size: 11px; font-weight: 700;
+  padding: 4px 12px; border-radius: 20px;
+}
+
+/* ── MAIN ── */
+main {
+  flex: 1;
+  display: flex; align-items: center; justify-content: center;
+  padding: 4rem 1.5rem;
+}
+.content {
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+.construction-icon {
+  font-size: 72px; line-height: 1; display: block;
+  margin-bottom: 1.25rem;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 8px 24px rgba(44,62,107,0.15));
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--blue);
+  background: rgba(44,62,107,0.08); padding: 4px 14px;
+  border-radius: 20px; margin-bottom: 1rem;
+}
+.content h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: clamp(28px, 5vw, 40px); font-weight: 900;
+  color: var(--blue-deeper); letter-spacing: -1px;
+  line-height: 1.15; margin-bottom: 1rem;
+}
+.content h1 span {
+  background: var(--blue); color: var(--yellow-mid);
+  padding: 1px 10px; border-radius: 6px; display: inline-block;
+}
+.content p {
+  font-size: 14px; color: var(--gray); line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.info-note {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--blue-light); border: 1px solid rgba(44,62,107,0.15);
+  border-radius: 12px; padding: 12px 16px; text-align: left;
+  font-size: 13px; color: var(--blue-deeper); line-height: 1.5;
+  margin-bottom: 2rem;
+}
+.info-note-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+
+.progress-bar-wrap {
+  background: rgba(44,62,107,0.1); border-radius: 20px;
+  height: 6px; margin-bottom: 5px; overflow: hidden;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--blue-mid), var(--blue));
+  border-radius: 20px;
+  animation: progress 2.5s ease-in-out infinite alternate;
+}
+@keyframes progress {
+  from { width: 25%; }
+  to   { width: 60%; }
+}
+.progress-label {
+  font-size: 11px; color: var(--gray); text-align: right;
+  margin-bottom: 2rem; opacity: 0.8;
+}
+
+.btn-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--blue); color: var(--yellow-mid);
+  font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 800;
+  padding: 11px 26px; border-radius: 12px; text-decoration: none;
+  transition: background .15s, transform .1s; letter-spacing: 0.3px;
+}
+.btn-back:hover { background: var(--blue-dark); transform: translateY(-2px); }
+.btn-back:active { transform: translateY(0); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--yellow); border-top: 2px solid var(--yellow-dark);
+  padding: 1rem 2rem; display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 8px;
+}
+.footer-brand {
+  font-family: 'Raleway', sans-serif; font-size: 13px;
+  font-weight: 700; color: var(--blue-deeper);
+}
+.footer-note { font-size: 12px; color: var(--blue-dark); opacity: 0.7; }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" id="logo-link" href="#">
+    <div class="logo-mark">
+      <svg viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="6.5" r="3.5" fill="#F5E97A"/>
+        <path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5"
+              stroke="#F5E97A" stroke-width="2.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-name">Mercado Libre</div>
+      <div class="logo-sub" id="logo-sub">Ferramentas Internas</div>
+    </div>
+  </a>
+  <div class="header-right">
+    <!-- back link — sempre leva para a página principal do idioma ativo -->
+    <a class="lang-link" id="header-back" href="#">
+      ‹ <span id="header-back-text">Voltar</span>
+    </a>
+    <!-- link de idioma — mostra APENAS o outro idioma, igual ao padrão MTM -->
+    <a class="lang-link" id="lang-switch" href="#" onclick="switchLang(event)">
+      <span id="lang-switch-text">🇪🇸 Español</span>
+    </a>
+    <span class="badge-header">MTM</span>
+  </div>
+</header>
+
+<main>
+  <div class="content">
+    <span class="construction-icon">🚧</span>
+    <div class="eyebrow" id="eyebrow"></div>
+    <h1 id="title"></h1>
+    <p id="desc"></p>
+    <div class="info-note">
+      <span class="info-note-icon">💡</span>
+      <span id="info-note"></span>
+    </div>
+    <div class="progress-bar-wrap"><div class="progress-bar"></div></div>
+    <div class="progress-label" id="progress-label"></div>
+    <a class="btn-back" id="btn-back" href="#">
+      ‹ <span id="btn-back-text"></span>
+    </a>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-brand">Mercado Libre — MTM</div>
+  <div class="footer-note" id="footer-note"></div>
+</footer>
+
+<script>
+  const MAIN_PT = 'https://mtmtransportes-paginainicialpt.vercel.app/';
+  const MAIN_ES = 'https://mtmtransportes-paginainiciales.vercel.app/';
+
+  const copy = {
+    pt: {
+      htmlLang:      'pt-BR',
+      logoSub:       'Ferramentas Internas',
+      headerBack:    'Voltar',
+      langSwitch:    '🇪🇸 Español',
+      eyebrow:       '⚙️ Em breve',
+      title:         'Página em <span>construção</span>',
+      desc:          'Este conteúdo ainda está sendo preparado pelo time de MTM e estará disponível em breve.',
+      infoNote:      'Para dúvidas, entre em contato com o time de MTM.',
+      progressLabel: 'Em desenvolvimento...',
+      btnBack:       'Voltar para as páginas',
+      footerNote:    'Ferramentas de Planejamento Operacional',
+      mainUrl:       MAIN_PT,
+      otherLang:     'es',
+    },
+    es: {
+      htmlLang:      'es',
+      logoSub:       'Herramientas Internas',
+      headerBack:    'Volver',
+      langSwitch:    '🇧🇷 Português',
+      eyebrow:       '⚙️ Próximamente',
+      title:         'Página en <span>construcción</span>',
+      desc:          'Este contenido está siendo preparado por el equipo de MTM y estará disponible próximamente.',
+      infoNote:      'Para consultas, ponte en contacto con el equipo de MTM.',
+      progressLabel: 'En desarrollo...',
+      btnBack:       'Volver a las páginas',
+      footerNote:    'Herramientas de Planificación Operacional',
+      mainUrl:       MAIN_ES,
+      otherLang:     'pt',
+    }
+  };
+
+  let currentLang = 'pt';
+
+  function setLang(lang) {
+    currentLang = lang;
+    const c = copy[lang];
+
+    document.documentElement.lang = c.htmlLang;
+    document.getElementById('logo-sub').textContent  = c.logoSub;
+    document.getElementById('header-back-text').textContent = c.headerBack;
+    document.getElementById('lang-switch-text').textContent = c.langSwitch;
+    document.getElementById('eyebrow').textContent   = c.eyebrow;
+    document.getElementById('title').innerHTML       = c.title;
+    document.getElementById('desc').textContent      = c.desc;
+    document.getElementById('info-note').textContent = c.infoNote;
+    document.getElementById('progress-label').textContent = c.progressLabel;
+    document.getElementById('btn-back-text').textContent  = c.btnBack;
+    document.getElementById('footer-note').textContent    = c.footerNote;
+
+    // back links — href direto, sem JS interceptando
+    document.getElementById('logo-link').href   = c.mainUrl;
+    document.getElementById('header-back').href = c.mainUrl;
+    document.getElementById('btn-back').href    = c.mainUrl;
+  }
+
+  function switchLang(e) {
+    e.preventDefault();
+    setLang(copy[currentLang].otherLang);
+  }
+
+  function detectLang() {
+    // 1. Parâmetro na URL: ?lang=es ou ?lang=pt
+    const param = new URLSearchParams(window.location.search).get('lang');
+    if (param === 'es' || param === 'pt') return param;
+
+    // 2. Referrer — detecta se veio de uma página PT ou ES
+    const ref = (document.referrer || '').toLowerCase();
+    if (ref.includes('paginainiciales') || ref.includes('-es.') || ref.includes('/es/')) return 'es';
+    if (ref.includes('paginainicialpt') || ref.includes('-pt.') || ref.includes('/pt/')) return 'pt';
+
+    // 3. Idioma do navegador como fallback
+    return (navigator.language || '').toLowerCase().startsWith('es') ? 'es' : 'pt';
+  }
+
+  setLang(detectLang());
+</script>
+</body>
+</html>
